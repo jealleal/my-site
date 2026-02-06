@@ -31,13 +31,13 @@ const Home = async () => {
 
     const day = date.getDate();
     const month = date.getMonth() + 1;
-    const birthday = day === 7 && month === 9;
+    const birthday = day === 3 && month === 11;
     const christmas =
         (day === 31 && month === 12) || (day === 1 && month === 1);
-    const age = fullYearsDifference(new Date('2007-09-07'), date);
+    const age = fullYearsDifference(new Date('2009-11-03'), date);
 
     const year = new Intl.DateTimeFormat('en-US', {
-        timeZone: 'Etc/GMT-3',
+        timeZone: 'Etc/GMT-2',
         year: 'numeric'
     }).format(date);
 
