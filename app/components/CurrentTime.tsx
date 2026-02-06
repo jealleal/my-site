@@ -7,7 +7,7 @@ const getTime = (): string => {
         minute: 'numeric',
         second: 'numeric',
         hour12: false,
-        timeZone: 'Etc/GMT-3'
+        timeZone: 'Etc/GMT-2'
     });
 };
 
