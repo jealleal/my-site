@@ -102,7 +102,7 @@ export default function Home(props: {
                             <div className={styles.card_inner}>
                                 <div className={styles.avatar_bubble}>
                                     <Image
-                                        src="/static/andcool.png"
+                                        src="/static/jealleal.png"
                                         alt="Avatar"
                                         width={460}
                                         height={460}
@@ -142,20 +142,20 @@ export default function Home(props: {
                             </div>
                         </div>
                         <div className={styles.name_cont}>
-                            <h1 className={styles.name}>AndcoolSystems</h1>
+                            <h1 className={styles.name}>ᴊⲉⲁⳑⳑⲉⲁⳑ</h1>
                             <Weather />
                         </div>
                     </div>
                     <div className={styles.hello}>
                         <h2>Привет👋</h2>
                         <p style={{ marginTop: '3px' }}>
-                            Я <b>Эндкул</b> – Фуллстак TypeScript программист и
-                            немного электронщик. В свободное время занимаюсь
+                            Я <b>jealleal</b> – Фуллстак python и luau программист и
+                            немного пишу на плюсах. В свободное время занимаюсь
                             разработкой сайтов, иногда пишу Телеграм или Дискорд
                             ботов, сервера и утилиты.
                             <br />
-                            <br />В реальности меня зовут <b>Андрей</b>, мне{' '}
-                            <StaticTooltip title="7 Сентября 2007г.">
+                            <br />В реальности меня зовут <b>Артем</b>, мне{' '}
+                            <StaticTooltip title="3 Ноября 2009г.">
                                 <span style={{ cursor: 'pointer' }}>
                                     {props.age} лет
                                 </span>
@@ -170,7 +170,7 @@ export default function Home(props: {
                     </div>
                     <div className={styles.social}>
                         <a
-                            href="https://github.com/Andcool-Systems"
+                            href="https://github.com/jealleal"
                             style={{ color: '#eeeeee', textDecoration: 'none' }}
                             target="_blank"
                         >
@@ -358,7 +358,7 @@ export default function Home(props: {
             <div className={styles_pr.main}>
                 {projects_el}
                 <Link
-                    href="https://github.com/Andcool-Systems?tab=repositories"
+                    href="https://github.com/jealleal?tab=repositories"
                     target="_blank"
                     style={{ textDecoration: 'none' }}
                 >
@@ -373,7 +373,7 @@ export default function Home(props: {
             </div>
 
             <footer>
-                <p>AndcóolSýstems, andcóol, эндку́л 2018–{props.year}</p>
+                <p>0x256, jealleal, джеаллеал, желель 2023–{props.year}</p>
             </footer>
         </main>
     );
