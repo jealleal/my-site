@@ -6,9 +6,9 @@ const capitalize = (str: string) =>
 export async function GET() {
     const response = await fetch(
         `https://api.openweathermap.org/data/2.5/weather` +
-            `?lat=${process.env.WEATHER_LAT}` +
-            `&lon=${process.env.WEATHER_LON}` +
-            `&appid=${process.env.WEATHER_TOKEN}` +
+            `?lat=62.14` +
+            `&lon=129.53` +
+            `&appid=9112eb3568f9caa8e4407f7e348fcb71` +
             `&units=metric` +
             `&lang=ru`,
         {
