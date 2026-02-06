@@ -5,7 +5,7 @@ const BuyMeCoffee = () => {
     return (
         <a
             className={styles.buyMeACoffee}
-            href="https://www.donationalerts.com/r/andcool_systems"
+            href="https://www.donationalerts.com/r/jealleal"
             target="_blank"
         >
             <IconCoffee />
