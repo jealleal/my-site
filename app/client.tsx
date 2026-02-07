@@ -10,6 +10,7 @@ import ExpressIcon from '@/app/static/express.svg';
 import NginxIcon from '@/app/static/nginx.svg';
 import JavaIcon from '@/app/static/java.svg';
 import NestIcon from '@/app/static/nest.svg';
+import LuaIcon from '@/app/static/lua.svg';
 import {
     IconBrandCloudflare,
     IconBrandCpp,
