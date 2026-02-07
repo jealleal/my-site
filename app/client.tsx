@@ -175,8 +175,8 @@ export default function Home(props: {
                     <div className={styles.profileSection}>
                         <div className={styles.lanyardWrapper}>
                             <img 
-                                alt="Дискорд Профиль" 
-                                src="https://lanyard.cnrad.dev/api/1158811379017449473?showDisplayName=true&hideActivity=true"
+                                href="https://discord.com/users/1158811379017449473"
+                                src="https://lanyard.cnrad.dev/api/1158811379017449473?bg=1e1e1ecc&showDisplayName=true&hideActivity=true"
                                 className={styles.profileCard}
                             />
                         </div>
