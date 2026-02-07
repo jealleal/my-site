@@ -192,7 +192,7 @@ export default function Home(props: {
                             </div>
                         </div>
                     </Card3D>
-                    <ReactCSSTransition
+                    <CSSTransition
                         timeout={500}
                         state={!isScrolled}
                         classNames={{
@@ -241,7 +241,7 @@ export default function Home(props: {
                                 </div>
                             </a>
                         </div>
-                    </ReactCSSTransition>
+                    </CSSTransition>
                 </div>
                 
                 <span
