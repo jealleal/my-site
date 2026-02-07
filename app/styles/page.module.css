@@ -1,88 +1,91 @@
 .header {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	padding: 2rem;
-	box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .animated {
-	animation: main_anim .8s cubic-bezier(.4, 0, .2, 1);
-	max-width: 668px;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
+    animation: main_anim .8s cubic-bezier(.4, 0, .2, 1);
+    max-width: 668px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem; /* Добавлено: уменьшает отступы между элементами */
 }
 
 .name {
-	color: white;
-	margin: 0;
-	margin-top: 1rem;
-	font-size: 3rem;
-	font-weight: 400;
-	z-index: 1;
+    color: white;
+    margin: 0;
+    margin-top: 0.5rem; /* Уменьшено с 1rem */
+    font-size: 3rem;
+    font-weight: 400;
+    z-index: 1;
 }
 
 .name_cont {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1.5rem;
 }
 
 .name_cont img {
-	width: 1.5rem;
-	filter: brightness(.5);
+    width: 1.5rem;
+    filter: brightness(.5);
 }
 
 .name_cont p {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 5px;
-	animation: show_blur .4s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    animation: show_blur .4s;
 }
 
 @keyframes show_blur {
-	0% {
-		filter: blur(15px);
-	}
+    0% {
+        filter: blur(15px);
+    }
 
-	100% {
-		filter: blur(0px);
-	}
+    100% {
+        filter: blur(0px);
+    }
 }
 
 .nicks {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-start;
-	box-sizing: border-box;
-	flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .hello {
-	text-align: left;
+    text-align: left;
+    margin-top: 0.5rem; /* Добавлено: уменьшает отступ сверху */
 }
 
 .profileSection {
     display: flex;
-	justify-content: center;
+    justify-content: center;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 0.5rem 0; /* Уменьшено с 1.5rem */
+    margin-top: -0.5rem; /* Добавлено: поднимаем карточку выше */
 }
 
 .lanyardWrapper {
     width: 100%;
     max-width: 380px;
-    padding: 1rem;
+    padding: 0.75rem; /* Уменьшено с 1rem */
     background: 1e1e1e;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -97,37 +100,12 @@
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    .lanyardContainer {
-        max-width: 90%;
-        margin: 1.5rem auto;
-        padding: 0.75rem;
-    }
-    
-    .lanyardWrapper {
-        max-width: 95%;
-        padding: 0.75rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .lanyardContainer {
-        max-width: 100%;
-        margin: 1rem auto;
-        padding: 0.5rem;
-    }
-    
-    .lanyardWrapper {
-        max-width: 100%;
-        padding: 0.5rem;
-    }
-}
-
+/* Основные изменения для социальных сетей */
 .social_container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 6rem 0 4rem 0;
+    margin: 0; /* Убрано: 6rem 0 4rem 0 */
     animation: main_anim 1s cubic-bezier(.4, 0, .2, 1) 0.3s both;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(0);
@@ -135,31 +113,9 @@
 }
 
 .social_scrolled {
-    margin: 3rem 0 2rem 0 !important;
+    margin: 0 !important; /* Убрано: 3rem 0 2rem 0 */
     transform: translateY(-300px);
     opacity: 0.9;
-}
-
-.social_enter {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.social_enter_active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 500ms, transform 500ms;
-}
-
-.social_exit {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.social_exit_active {
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 500ms, transform 500ms;
 }
 
 .social {
@@ -168,53 +124,25 @@
     gap: 1.5rem;
     justify-content: center;
     max-width: 600px;
-    margin: 4rem auto 3rem auto;
+    margin: 0; /* Убрано: 4rem auto 3rem auto */
 }
 
-@media(max-width: 970px) {
+/* Для десктопов */
+@media (min-width: 971px) {
     .social {
-        margin: 3rem auto 2rem auto !important;
+        margin: 1.5rem auto 0 auto; /* Минимальный отступ */
+        transform: translateY(-30px); /* Поднимаем выше */
     }
-}
-
-@media(max-width: 512px) {
-    .social {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-}
-
-.single {
-    cursor: pointer;
-    border: 2px solid var(--border-color);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding: 1rem 2rem;
-    background-color: var(--buttons-color);
-    transition: all 0.3s ease;
-    gap: 1rem;
-    min-width: 160px;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.single:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.single span {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-@media(max-width: 970px) {
+    
     .social_container {
-        margin: 4rem 0 3rem 0 !important;
+        margin: 1.5rem 0 0 0; /* Минимальный отступ */
+    }
+}
+
+/* Для планшетов */
+@media (max-width: 970px) {
+    .social_container {
+        margin: 1rem 0 0 0 !important; /* Уменьшенный отступ */
         animation: none !important;
         transform: none !important;
         opacity: 1 !important;
@@ -224,6 +152,7 @@
         gap: 1rem;
         width: 100%;
         padding: 0 1rem;
+        margin: 1rem auto 0 auto; /* Уменьшенный отступ */
     }
     
     .single {
@@ -231,219 +160,298 @@
         padding: 0.8rem 1.5rem;
         gap: 0.8rem;
     }
+    
+    .profileSection {
+        padding: 0.5rem 0;
+        margin-top: 0;
+    }
 }
 
-@media(max-width: 512px) {
+/* Для мобильных телефонов */
+@media (max-width: 768px) {
     .social_container {
-        margin: 3rem 0 2rem 0 !important;
+        margin: 0.5rem 0 0 0 !important; /* Минимальный отступ */
+        padding: 0 0.5rem; /* Добавлено: боковые отступы */
     }
     
     .social {
-        flex-direction: column;
-        align-items: center;
         gap: 0.8rem;
+        margin: 0.5rem auto 0 auto; /* Минимальный отступ */
+        padding: 0 0.5rem;
+        flex-wrap: nowrap; /* Изменено: чтобы кнопки были в одну строку */
+        overflow-x: auto; /* Добавлено: горизонтальная прокрутка если нужно */
+        justify-content: flex-start; /* Изменено: выравнивание по левому краю */
+        max-width: 100%; /* Изменено: занимает всю ширину */
     }
     
     .single {
-        width: 200px;
-        justify-content: center;
+        min-width: auto; /* Убрано фиксированную минимальную ширину */
+        padding: 0.7rem 1rem;
+        gap: 0.6rem;
+        flex-shrink: 0; /* Добавлено: предотвращает сжатие */
+        white-space: nowrap; /* Добавлено: предотвращает перенос текста */
+    }
+    
+    .single span {
+        font-size: 1rem; /* Уменьшен шрифт */
+    }
+    
+    .lanyardWrapper {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0.5rem;
+    }
+    
+    .profileSection {
+        padding: 0.25rem 0;
+        margin-top: -0.5rem;
+    }
+}
+
+/* Для очень маленьких телефонов */
+@media (max-width: 480px) {
+    .social_container {
+        margin: 0.25rem 0 0 0 !important; /* Очень маленький отступ */
+    }
+    
+    .social {
+        gap: 0.6rem;
+        margin: 0.25rem auto 0 auto;
+        padding: 0;
+    }
+    
+    .single {
+        padding: 0.6rem 0.8rem;
+        gap: 0.5rem;
+        border-radius: 0.8rem;
+    }
+    
+    .single svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    
+    .single span {
+        font-size: 0.9rem;
+    }
+    
+    .lanyardWrapper {
+        max-width: 95%;
+        padding: 0.4rem;
+    }
+    
+    .profileSection {
+        padding: 0.1rem 0;
+        margin-top: -1rem; /* Еще выше поднимаем на маленьких экранах */
+    }
+    
+    /* Уменьшаем отступы в header для мобилок */
+    .header {
+        padding: 1rem;
+        min-height: calc(100vh - 2rem); /* Немного уменьшаем минимальную высоту */
+    }
+    
+    .animated {
+        gap: 1rem; /* Еще меньше отступы между блоками */
+    }
+    
+    .name {
+        margin-top: 0.25rem;
+        font-size: 2.2rem;
+    }
+    
+    .hello {
+        margin-top: 0.25rem;
+    }
+    
+    .card {
+        width: 12rem;
+        height: 12rem;
     }
 }
 
 .main_tech {
-	color: #E2CC00;
-	text-shadow: 0px 0px 120px #E2CC00;
+    color: #E2CC00;
+    text-shadow: 0px 0px 120px #E2CC00;
 }
 
 .stack {
-	width: 40%;
-	justify-content: center;
-	margin-bottom: 3rem;
+    width: 40%;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .tech {
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: repeat(auto-fill, 5rem);
-
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, 5rem);
 }
 
 .tech img {
-	width: 4rem;
+    width: 4rem;
 }
 
 .tech span {
-	margin-top: 5px;
+    margin-top: 5px;
 }
 
 .tech div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5rem;
 }
 
 .projects_txt {
-	color: #0cb8af;
-	text-shadow: 0px 0px 120px #0cb8af;
+    color: #0cb8af;
+    text-shadow: 0px 0px 120px #0cb8af;
 }
 
 @keyframes main_anim {
-	0% {
-		opacity: 0;
-		filter: blur(5px);
-		transform: translateY(100px) scale(.9);
-	}
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(100px) scale(.9);
+    }
 
-	100% {
-		opacity: 1;
-		filter: blur(0);
-		transform: translateY(0) scale(1);
-	}
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0) scale(1);
+    }
 }
 
-
 .avatar_bubble {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
-	width: 15rem;
-	height: 15rem;
-	user-select: none;
+    width: 15rem;
+    height: 15rem;
+    user-select: none;
 }
 
 .card_inner {
-	width: 100%;
-	height: 100%;
-	transition: transform 0.6s cubic-bezier(0.72, 0.55, 0.46, 1.33);
-	transform-style: preserve-3d;
-	position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.72, 0.55, 0.46, 1.33);
+    transform-style: preserve-3d;
+    position: relative;
 }
 
 .card img {
-	width: 100%;
-	height: auto;
-	border-radius: 50%;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
 .scroll_bottom {
-	position: absolute;
-	bottom: 1rem;
-	display: flex;
-	align-items: center;
-	gap: .2rem;
-	font-weight: 350;
-	font-size: 1.2rem;
-	opacity: 1;
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    font-weight: 350;
+    font-size: 1.2rem;
+    opacity: 1;
 }
 
 .party_hat {
-	position: absolute;
-	border-radius: 0 !important;
-	width: 9rem !important;
-	top: -6.3rem;
-	right: -.7rem;
+    position: absolute;
+    border-radius: 0 !important;
+    width: 9rem !important;
+    top: -6.3rem;
+    right: -.7rem;
 }
 
 .christmas_hat {
-	position: absolute;
-	border-radius: 0 !important;
-	width: 9rem !important;
-	top: -5.3rem;
-	right: 7.4rem;
-
-	transform: scale(-1.4, 1.4) rotate(4deg);
+    position: absolute;
+    border-radius: 0 !important;
+    width: 9rem !important;
+    top: -5.3rem;
+    right: 7.4rem;
+    transform: scale(-1.4, 1.4) rotate(4deg);
 }
 
 .buyMeACoffee {
-	position: fixed;
-	z-index: 99;
-	top: .5rem;
-	right: 0;
-
-	transform: translateX(calc(100% - (1rem + 24px)));
-
-	display: flex;
-	align-items: center;
-	gap: .5rem;
-
-	background-color: var(--buttons-color);
-	padding: .5rem;
-	border-radius: 8px 0 0 8px;
-	border: 1px var(--border-color) solid;
-	border-right: none;
-	color: white;
-	cursor: pointer;
-	text-decoration: none;
-
-	transition: transform 250ms;
+    position: fixed;
+    z-index: 99;
+    top: .5rem;
+    right: 0;
+    transform: translateX(calc(100% - (1rem + 24px)));
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--buttons-color);
+    padding: .5rem;
+    border-radius: 8px 0 0 8px;
+    border: 1px var(--border-color) solid;
+    border-right: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 250ms;
 }
 
 .stack_shadow_cont {
-	position: relative;
-	display: flex;
+    position: relative;
+    display: flex;
 }
 
 .stack_shadow {
-	position: absolute;
-	z-index: -1;
-	width: 50px;
-	height: auto;
-	aspect-ratio: 1;
-	transform: translate(calc((50% - 12px) * -1), calc((50% - 12px) * -1));
-
-	filter: blur(60px);
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: auto;
+    aspect-ratio: 1;
+    transform: translate(calc((50% - 12px) * -1), calc((50% - 12px) * -1));
+    filter: blur(60px);
 }
 
 .buyMeACoffee p {
-	font-size: .8rem;
-	margin: 0;
+    font-size: .8rem;
+    margin: 0;
 }
 
 .buyMeACoffee:hover {
-	transform: translateX(0px);
+    transform: translateX(0px);
 }
 
 @media(max-width: 970px) {
-	.nicks {
-		flex-direction: column;
-	}
+    .nicks {
+        flex-direction: column;
+    }
 
-	.name {
-		margin-top: 2rem;
-		font-size: 2.5rem;
-	}
+    .name {
+        margin-top: 1.5rem; /* Уменьшено с 2rem */
+        font-size: 2.5rem;
+    }
 
-	.name_cont {
-		margin-left: 0;
-	}
+    .name_cont {
+        margin-left: 0;
+    }
 
-	.stack {
-		width: 80%;
-	}
+    .stack {
+        width: 80%;
+    }
 
-	.social {
-		flex-direction: column;
-	}
+    .single {
+        justify-content: center;
+    }
 
-	.scroll_bottom {
-		display: none;
-	}
-
-	.single {
-		justify-content: center;
-	}
-
-	.header_birthday {
-		padding-top: 7rem;
-	}
+    .header_birthday {
+        padding-top: 7rem;
+    }
 }
 
 @media(max-width: 512px) {
-	.tech {
-		justify-content: center;
-	}
+    .tech {
+        justify-content: center;
+    }
+    
+    .scroll_bottom {
+        display: none;
+    }
 }
