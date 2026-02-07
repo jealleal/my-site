@@ -74,6 +74,7 @@
 
 .profileSection {
     display: flex;
+	justify-content: center;
     width: 100%;
     padding: 1.5rem 0;
 }
@@ -124,6 +125,7 @@
 
 .social {
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	gap: 0.7rem;
 }
