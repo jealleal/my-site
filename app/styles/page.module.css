@@ -320,7 +320,10 @@
 }
 
 .stack {
-    width: 40%;
+    width: 100%; /* Изменено с 40% */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Добавлено */
     justify-content: center;
     margin-bottom: 3rem;
 }
@@ -329,6 +332,9 @@
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fill, 5rem);
+    justify-content: center; /* Добавлено */
+    width: fit-content; /* Добавлено */
+    margin: 0 auto; /* Добавлено */
 }
 
 .tech img {
