@@ -101,8 +101,7 @@ export default function Home(props: {
     return (
         <main style={{ position: 'relative', inset: 0, overflow: 'hidden' }}>
             <BuyMeCoffee />
-            {/*<Activity />*/}
-            <header
+           <header
                 className={`${styles.header} ${
                     (props.birthday || props.christmas) &&
                     styles.header_birthday
@@ -110,9 +109,9 @@ export default function Home(props: {
             >
                 <div className={styles.animated}>
                     <div className={styles.nicks}>
-                        <Card3D ref={avatarRef}>
+                        <Card3D>
                             <div className={`${styles.card} card`}>
-                                <div className={styles.card_inner} ref={avatarRef}>
+                                <div className={styles.card_inner}>
                                     <div className={styles.avatar_bubble}>
                                         <Image
                                             src="/static/jealleal.png"
@@ -158,7 +157,7 @@ export default function Home(props: {
                         </Card3D>
                         
                         <div className={styles.name_cont}>
-                            <h1 className={`${styles.name} ${zedMono.className}`}>ᴊⲉⲁⳑⳑⲉⲁⳑ</h1>
+                            <h1 className={styles.name}>ᴊⲉⲁⳑⳑⲉⲁⳑ</h1>
                             <Weather />
                         </div>
                     </div>
@@ -182,8 +181,8 @@ export default function Home(props: {
                             <CurrentTime initial={props.timeServer} />
                         </p>
                     </div>
-                    <Card3D ref={lanyardRef}>
-                        <div className={styles.profileSection} ref={lanyardRef}>
+                    <Card3D>
+                        <div className={styles.profileSection}>
                             <div className={styles.lanyardWrapper}>
                                 <img 
                                     src="https://lanyard.cnrad.dev/api/1158811379017449473?bg=0a0a0a&showDisplayName=true&hideActivity=true"
