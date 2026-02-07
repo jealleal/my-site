@@ -375,7 +375,7 @@ export default function Home(props: {
             </div>
 
             <footer>
-                <p>0x256, jealleal, джеаллеал, желель 2023–{props.year}</p>
+                <p>© {props.year} jealleal</p>
             </footer>
         </main>
     );
