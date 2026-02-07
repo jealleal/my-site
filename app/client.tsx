@@ -58,24 +58,31 @@ export default function Home(props: {
     year: string;
     age: number;
 }) {
+    const [isScrolled, setIsScrolled] = useState(false);
+    
     useEffect(() => {
-        window.onbeforeunload = () => {
-            if (!window.location.hash) {
-                window.scrollTo(0, 0);
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const clientHeight = document.documentElement.clientHeight;
+            
+            if (scrollY > clientHeight * 0.3) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+            
+            const alpha = Math.max(0, clientHeight / 2 - scrollY) / (clientHeight / 2);
+            const scroll_bottom = document.getElementById('scroll_bottom');
+            if (scroll_bottom) {
+                scroll_bottom.style.opacity = alpha.toString();
             }
         };
 
-        window.onscroll = () => {
-            const client_height = document.documentElement.clientHeight / 2;
-            const alpha =
-                Math.max(0, client_height - window.scrollY) / client_height;
-
-            const scroll_bottom = document.getElementById('scroll_bottom');
-            scroll_bottom.style.opacity = alpha.toString();
-        };
-
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+        
         return () => {
-            window.onscroll = null;
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -189,7 +196,7 @@ export default function Home(props: {
                     Scroll down
                 </span>
             </header>
-            <div className={styles.social_container}>
+            <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
                 <div className={styles.social}>
                     <a
                         href="https://github.com/jealleal"
