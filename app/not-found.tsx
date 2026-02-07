@@ -84,7 +84,7 @@ const Dot404Canvas = () => {
         <main className={styles.main}>
             <div className={styles.side}>
                 <div className={styles.text_container}>
-                    <h2>Кажется, запрашиваемая страница не найдена (</h2>
+                    <h2>Кажется, вы потерялись в пространстве времени.</h2>
                     <p>Проверьте введенный URL</p>
                 </div>
             </div>
