@@ -1,11 +1,4 @@
-# Ignore everything
 *
-
-# But not these files...
-!.gitignore
-!script.tsx
-!README.md
-# etc...
-
-# ...even if they are in subdirectories
-!*/
+!/.gitignore
+!/README.md
+!/LICENSE
