@@ -155,6 +155,7 @@
 .stack {
 	width: 40%;
 	text-align: left;
+	justify-content: center;
 	margin-bottom: 3rem;
 }
 
