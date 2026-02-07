@@ -44,7 +44,7 @@ const Wakatime = () => {
             <a
                 ref={wakaRef}
                 target="_blank"
-                href="https://wakatime.com/@AndcoolSystems"
+                href="https://wakatime.com/@jealleal"
                 style={{ color: '#eeeeee' }}
                 className={zedMono.className}
             />
