@@ -189,6 +189,46 @@ export default function Home(props: {
                     Scroll down
                 </span>
             </header>
+            <div className={styles.social_container}>
+                <div className={styles.social}>
+                    <a
+                        href="https://github.com/jealleal"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
+                        target="_blank"
+                    >
+                        <div className={styles.single}>
+                            <IconBrandGithub />
+                            <span>
+                                <b>GitHub</b>
+                            </span>
+                        </div>
+                    </a>
+                    <a
+                        href="/tg"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
+                        target="_blank"
+                    >
+                        <div className={styles.single}>
+                            <IconBrandTelegram />
+                            <span>
+                                <b>Telegram</b>
+                            </span>
+                        </div>
+                    </a>
+                    <a
+                        href="/tgc"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
+                        target="_blank"
+                    >
+                        <div className={styles.single}>
+                            <IconBrandTelegram />
+                            <span>
+                                <b>Channel</b>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <h1>
                 Основные <span className={styles.main_tech}>навыки</span>
             </h1>
