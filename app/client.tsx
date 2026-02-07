@@ -11,6 +11,7 @@ import NginxIcon from '@/app/static/nginx.svg';
 import JavaIcon from '@/app/static/java.svg';
 import NestIcon from '@/app/static/nest.svg';
 import LuaIcon from '@/app/static/lua.svg';
+import CsharpIcon from '@/app/static/csharp.svg';
 import {
     IconBrandCloudflare,
     IconBrandCpp,
@@ -338,6 +339,10 @@ export default function Home(props: {
                     <div>
                         <IconBrandCpp {...techIconProps} />
                         <span>C++</span>
+                    </div>
+                    <div>
+                        <CsharpIcon {...techIconProps} />
+                        <span>C#</span>
                     </div>
                     <div>
                         <JavaIcon {...techIconProps} />
