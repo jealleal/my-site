@@ -24,7 +24,7 @@ export const projects: ProjectProp[] = [
         creation_date: '01.06.2023',
         tags: ['Python', 'Roblox', 'Cookie', 'Multitool'],
         icon: {
-            url: '/static/quasar.ico',
+            url: '/static/quasar.jpg',
             color: '#a0a0a0'
         },
         short_description: quaasr,
