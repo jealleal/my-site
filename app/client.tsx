@@ -2,7 +2,8 @@
 
 import styles from './styles/page.module.css';
 import styles_pr from '@/app/styles/projects.module.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { Card3D } from './components/card3d';
 import { projects } from './data.tsx';
 import Card from './components/projectCard.module.tsx';
 
@@ -109,51 +110,55 @@ export default function Home(props: {
             >
                 <div className={styles.animated}>
                     <div className={styles.nicks}>
-                        <div className={`${styles.card} card`}>
-                            <div className={styles.card_inner}>
-                                <div className={styles.avatar_bubble}>
-                                    <Image
-                                        src="/static/jealleal.png"
-                                        alt="Avatar"
-                                        width={460}
-                                        height={460}
-                                    />
-                                    {props.birthday && (
+                        <Card3D ref={avatarRef}>
+                            <div className={`${styles.card} card`}>
+                                <div className={styles.card_inner} ref={avatarRef}>
+                                    <div className={styles.avatar_bubble}>
                                         <Image
-                                            src="/static/party-hat.png"
-                                            alt="party hat"
-                                            className={styles.party_hat}
-                                            width={512}
-                                            height={512}
+                                            src="/static/jealleal.png"
+                                            alt="Avatar"
+                                            width={460}
+                                            height={460}
+                                            style={{ borderRadius: '50%' }}
                                         />
-                                    )}
-                                    {props.christmas && (
-                                        <Image
-                                            src="/static/christmas-hat.png"
-                                            alt="christmas"
-                                            className={styles.christmas_hat}
-                                            width={360}
-                                            height={360}
+                                        {props.birthday && (
+                                            <Image
+                                                src="/static/party-hat.png"
+                                                alt="party hat"
+                                                className={styles.party_hat}
+                                                width={512}
+                                                height={512}
+                                            />
+                                        )}
+                                        {props.christmas && (
+                                            <Image
+                                                src="/static/christmas-hat.png"
+                                                alt="christmas"
+                                                className={styles.christmas_hat}
+                                                width={360}
+                                                height={360}
+                                            />
+                                        )}
+                                        <Bubble
+                                            colors={[
+                                                '#ff0000',
+                                                '#00ff00',
+                                                '#0000ff'
+                                            ]}
+                                            styles={{
+                                                width: 'calc(100% + 35px)',
+                                                position: 'absolute'
+                                            }}
+                                            width={300}
+                                            height={300}
                                         />
-                                    )}
-                                    <Bubble
-                                        colors={[
-                                            '#ff0000',
-                                            '#00ff00',
-                                            '#0000ff'
-                                        ]}
-                                        styles={{
-                                            width: 'calc(100% + 35px)',
-                                            position: 'absolute'
-                                        }}
-                                        width={300}
-                                        height={300}
-                                    />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </Card3D>
+                        
                         <div className={styles.name_cont}>
-                            <h1 className={styles.name}>ᴊⲉⲁⳑⳑⲉⲁⳑ</h1>
+                            <h1 className={`${styles.name} ${zedMono.className}`}>ᴊⲉⲁⳑⳑⲉⲁⳑ</h1>
                             <Weather />
                         </div>
                     </div>
@@ -177,15 +182,69 @@ export default function Home(props: {
                             <CurrentTime initial={props.timeServer} />
                         </p>
                     </div>
-                    <div className={styles.profileSection}>
-                        <div className={styles.lanyardWrapper}>
-                            <img 
-                                src="https://lanyard.cnrad.dev/api/1158811379017449473?bg=0a0a0a&showDisplayName=true&hideActivity=true"
-                                className={styles.profileCard}
-                            />
+                    <Card3D ref={lanyardRef}>
+                        <div className={styles.profileSection} ref={lanyardRef}>
+                            <div className={styles.lanyardWrapper}>
+                                <img 
+                                    src="https://lanyard.cnrad.dev/api/1158811379017449473?bg=0a0a0a&showDisplayName=true&hideActivity=true"
+                                    alt="Discord Profile"
+                                    className={styles.profileCard}
+                                />
+                            </div>
                         </div>
-                    </div>
+                    </Card3D>
+                    <ReactCSSTransition
+                        timeout={500}
+                        state={!isScrolled}
+                        classNames={{
+                            enter: styles.social_enter,
+                            enterActive: styles.social_enter_active,
+                            exit: styles.social_exit,
+                            exitActive: styles.social_exit_active
+                        }}
+                        mountOnExit
+                    >
+                        <div className={styles.social}>
+                            <a
+                                href="https://github.com/jealleal"
+                                style={{ color: '#eeeeee', textDecoration: 'none' }}
+                                target="_blank"
+                            >
+                                <div className={styles.single}>
+                                    <IconBrandGithub />
+                                    <span>
+                                        <b>GitHub</b>
+                                    </span>
+                                </div>
+                            </a>
+                            <a
+                                href="/tg"
+                                style={{ color: '#eeeeee', textDecoration: 'none' }}
+                                target="_blank"
+                            >
+                                <div className={styles.single}>
+                                    <IconBrandTelegram />
+                                    <span>
+                                        <b>Telegram</b>
+                                    </span>
+                                </div>
+                            </a>
+                            <a
+                                href="/tgc"
+                                style={{ color: '#eeeeee', textDecoration: 'none' }}
+                                target="_blank"
+                            >
+                                <div className={styles.single}>
+                                    <IconBrandTelegram />
+                                    <span>
+                                        <b>Channel</b>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </ReactCSSTransition>
                 </div>
+                
                 <span
                     className={styles.scroll_bottom}
                     id="scroll_bottom"
