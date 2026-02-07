@@ -320,21 +320,49 @@
 }
 
 .stack {
-    width: 100%; /* Изменено с 40% */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Добавлено */
+    align-items: center;
     justify-content: center;
     margin-bottom: 3rem;
 }
 
 .tech {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill, 5rem);
-    justify-content: center; /* Добавлено */
-    width: fit-content; /* Добавлено */
-    margin: 0 auto; /* Добавлено */
+    justify-content: center; /* центрируем элементы внутри контейнера */
+    align-items: center;
+    max-width: 800px; /* ограничиваем максимальную ширину */
+    margin: 0 auto;
+}
+
+.tech div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5rem;
+    flex-shrink: 0; /* предотвращает сжатие */
+}
+
+@media(max-width: 768px) {
+    .tech {
+        gap: 1.5rem;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .tech {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .tech div {
+        width: 4.5rem;
+    }
 }
 
 .tech img {
@@ -343,13 +371,6 @@
 
 .tech span {
     margin-top: 5px;
-}
-
-.tech div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 5rem;
 }
 
 .projects_txt {
