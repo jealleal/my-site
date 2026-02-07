@@ -1,4 +1,3 @@
-как сделать чтобы scroll down был сзади с эффектом стекла чтобы его было видно:
 'use client';
 
 import styles from './styles/page.module.css';
