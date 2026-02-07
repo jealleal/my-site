@@ -178,7 +178,18 @@ export default function Home(props: {
                             />
                         </div>
                     </div>
-                    <div className={styles.social}>
+                </div>
+                <span
+                    className={styles.scroll_bottom}
+                    id="scroll_bottom"
+                    onClick={scrollDown}
+                    style={{ cursor: 'pointer' }}
+                >
+                    <IconChevronDown />
+                    Scroll down
+                </span>
+            </header>
+            <div className={styles.social}>
                         <a
                             href="https://github.com/jealleal"
                             style={{ color: '#eeeeee', textDecoration: 'none' }}
@@ -217,17 +228,6 @@ export default function Home(props: {
                             </div>
                         </a>
                     </div>
-                </div>
-                <span
-                    className={styles.scroll_bottom}
-                    id="scroll_bottom"
-                    onClick={scrollDown}
-                    style={{ cursor: 'pointer' }}
-                >
-                    <IconChevronDown />
-                    Scroll down
-                </span>
-            </header>
             <h1>
                 Основные <span className={styles.main_tech}>навыки</span>
             </h1>
