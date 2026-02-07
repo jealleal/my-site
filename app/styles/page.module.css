@@ -124,42 +124,30 @@
 }
 
 .social_container {
-    width: 100%;
+    position: fixed;
+    top: calc(100vh - 200px); /* Позиция внизу экрана */
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: center;
-    margin: 6rem 0 4rem 0;
-    animation: main_anim 1s cubic-bezier(.4, 0, .2, 1) 0.3s both;
+    z-index: 100;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
-    opacity: 1;
+    pointer-events: none;
 }
 
-.social_scrolled {
-    margin: 3rem 0 2rem 0 !important;
-    transform: translateY(-300px);
-    opacity: 0.9;
+.social_container > * {
+    pointer-events: auto;
 }
 
 .social_enter {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-.social_enter_active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 500ms, transform 500ms;
-}
-
-.social_exit {
     opacity: 1;
     transform: translateY(0);
 }
 
-.social_exit_active {
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 500ms, transform 500ms;
+.social_lift {
+    opacity: 0.9;
+    transform: translateY(calc(-100vh + 250px)); /* Поднимаем почти к lanyard */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
 .social {
@@ -168,21 +156,12 @@
     gap: 1.5rem;
     justify-content: center;
     max-width: 600px;
-    margin: 4rem auto 3rem auto;
-}
-
-@media(max-width: 970px) {
-    .social {
-        margin: 3rem auto 2rem auto !important;
-    }
-}
-
-@media(max-width: 512px) {
-    .social {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
+    padding: 1rem 2rem;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .single {
@@ -192,52 +171,38 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     background-color: var(--buttons-color);
     transition: all 0.3s ease;
     gap: 1rem;
-    min-width: 160px;
+    min-width: 140px;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .single:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.single span {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
 @media(max-width: 970px) {
     .social_container {
-        margin: 4rem 0 3rem 0 !important;
-        animation: none !important;
-        transform: none !important;
-        opacity: 1 !important;
+        top: calc(100vh - 180px);
+        position: absolute; /* На мобильных не fixed */
+    }
+    
+    .social_lift {
+        transform: translateY(calc(-100vh + 280px));
     }
     
     .social {
-        gap: 1rem;
-        width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .single {
-        min-width: 140px;
-        padding: 0.8rem 1.5rem;
-        gap: 0.8rem;
+        max-width: 90%;
+        padding: 1rem;
     }
 }
 
 @media(max-width: 512px) {
-    .social_container {
-        margin: 3rem 0 2rem 0 !important;
-    }
-    
     .social {
         flex-direction: column;
         align-items: center;
@@ -248,7 +213,10 @@
         width: 200px;
         justify-content: center;
     }
-}
+    
+    .social_lift {
+        transform: translateY(calc(-100vh + 320px));
+    }
 
 .main_tech {
 	color: #E2CC00;
