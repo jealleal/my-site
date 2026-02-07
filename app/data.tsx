@@ -25,7 +25,7 @@ export const projects: ProjectProp[] = [
         tags: ['Python', 'Roblox', 'Cookie', 'Multitool'],
         icon: {
             url: '/static/quasar.jpg',
-            color: '#a0a0a0'
+            color: '#53377a'
         },
         short_description: quaasr,
         full_description: quaasr_more,
