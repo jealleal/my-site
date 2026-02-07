@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Card3D } from './components/card3d';
 import { projects } from './data.tsx';
 import Card from './components/projectCard.module.tsx';
-import CSSTransition from './CSSTransition';
+import CSSTransition from './components/CSSTransition'; 
 import ExpressIcon from '@/app/static/express.svg';
 import NginxIcon from '@/app/static/nginx.svg';
 import JavaIcon from '@/app/static/java.svg';
