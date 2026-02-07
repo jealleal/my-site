@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Card3D } from './components/card3d';
 import { projects } from './data.tsx';
 import Card from './components/projectCard.module.tsx';
-
+import CSSTransition from './CSSTransition';
 import ExpressIcon from '@/app/static/express.svg';
 import NginxIcon from '@/app/static/nginx.svg';
 import JavaIcon from '@/app/static/java.svg';
@@ -192,7 +192,7 @@ export default function Home(props: {
                             </div>
                         </div>
                     </Card3D>
-                    <ReactCSSTransition
+                    <CSSTransition
                         timeout={500}
                         state={!isScrolled}
                         classNames={{
@@ -241,7 +241,7 @@ export default function Home(props: {
                                 </div>
                             </a>
                         </div>
-                    </ReactCSSTransition>
+                    </CSSTransition>
                 </div>
                 
                 <span
