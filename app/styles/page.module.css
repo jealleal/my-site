@@ -140,12 +140,35 @@
     opacity: 0.9;
 }
 
+.social_enter {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.social_enter_active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 500ms, transform 500ms;
+}
+
+.social_exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social_exit_active {
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 500ms, transform 500ms;
+}
+
 .social {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
     max-width: 600px;
+    margin: 4rem auto 3rem auto;
 }
 
 .single {
