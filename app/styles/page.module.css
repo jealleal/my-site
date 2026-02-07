@@ -72,6 +72,57 @@
 	text-align: left;
 }
 
+.profileSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+
+.lanyardWrapper {
+    width: 100%;
+    max-width: 380px;
+    padding: 1rem;
+    background: linear-gradient(145deg, rgba(30, 30, 30, 0.8), rgba(20, 20, 20, 0.8));
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.profileCard {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .lanyardContainer {
+        max-width: 90%;
+        margin: 1.5rem auto;
+        padding: 0.75rem;
+    }
+    
+    .lanyardWrapper {
+        max-width: 95%;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lanyardContainer {
+        max-width: 100%;
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+    
+    .lanyardWrapper {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+}
+
 .social {
 	display: flex;
 	flex-wrap: wrap;
