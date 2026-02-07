@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useEffect, useRef } from 'react';
 
 const WAKATIME_API =
-    'https://wakatime.com/share/@AndcoolSystems/c20041f4-a965-47c3-ac36-7234e622a980.json';
+    'https://wakatime.com/share/@jealleal/1f1aae8d-362a-4b13-ac9d-356a69f3daf2.json';
 
 const Wakatime = () => {
     const wakaRef = useRef<HTMLAnchorElement>(null);
