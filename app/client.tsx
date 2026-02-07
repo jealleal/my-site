@@ -149,12 +149,11 @@ export default function Home(props: {
                     <div className={styles.hello}>
                         <h2>Привет👋</h2>
                         <p style={{ marginTop: '3px' }}>
-                            Я <b>jealleal</b> – Фуллстак python и luau программист и
-                            немного пишу на плюсах. В свободное время занимаюсь
-                            разработкой сайтов, иногда пишу Телеграм или Дискорд
-                            ботов, сервера и утилиты.
+                            Я <b>jealleal</b> – Fullstack программист на питоне и luau.
+                            В свободное время занимаюсь разработкой сайтов, 
+                            иногда пишу Телеграм или Дискорд ботов, сервера и утилиты.
                             <br />
-                            <br />В реальности меня зовут <b>Артем</b>, мне{' '}
+                            <br />В реальности меня зовут <b>артем</b>, мне{' '}
                             <StaticTooltip title="3 Ноября 2009г.">
                                 <span style={{ cursor: 'pointer' }}>
                                     {props.age} лет
@@ -241,10 +240,6 @@ export default function Home(props: {
                 </h1>
                 <div className={styles.tech}>
                     <div>
-                        <IconBrandNextjs {...techIconProps} />
-                        <span>NextJs</span>
-                    </div>
-                    <div>
                         <IconBrandReact {...techIconProps} />
                         <span>ReactJs</span>
                     </div>
@@ -293,8 +288,10 @@ export default function Home(props: {
                         <span>Express.js</span>
                     </div>
                     <div>
-                        <IconBrandPrisma {...techIconProps} />
-                        <span style={{ textWrap: 'nowrap' }}>Prisma ORM</span>
+                        <StaticTooltip title="*В том числе и luau">
+                            <LuaIcon {...techIconProps} />
+                        </StaticTooltip>
+                        <span style={{ textWrap: 'nowrap' }}>*Lua</span>
                     </div>
                     <div>
                         <NginxIcon {...techIconProps} />
