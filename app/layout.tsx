@@ -8,18 +8,18 @@ const onest = Onest({
 });
 
 export const metadata: Metadata = {
-    title: 'jealleal - портфолио',
+    title: 'ᴊⲉⲁⳑⳑⲉⲁⳑ',
     icons: {
         icon: '/static/jealleal.png',
         shortcut: '/static/jealleal.png',
         apple: '/static/jealleal.png'
     },
     openGraph: {
-        title: 'jealleal - портфолио',
-        description: 'Человек, разработчик',
+        title: 'ᴊⲉⲁⳑⳑⲉⲁⳑ',
+        description: 'Fullstack Разработчик',
         url: 'https://vblox.lol/',
         siteName: 'vblox.lol',
-        images: 'https://andcool.ru/static/jealleal.png'
+        images: 'https://vblox.lol/static/jealleal.png'
     },
     twitter: {
         card: 'summary'
