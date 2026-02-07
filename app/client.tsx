@@ -2,7 +2,7 @@
 
 import styles from './styles/page.module.css';
 import styles_pr from '@/app/styles/projects.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { projects } from './data.tsx';
 import Card from './components/projectCard.module.tsx';
 
