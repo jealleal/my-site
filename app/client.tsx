@@ -6,7 +6,8 @@ import { useEffect, useState, useRef } from 'react';
 import { Card3D } from './components/card3d';
 import { projects } from './data.tsx';
 import Card from './components/projectCard.module.tsx';
-import CSSTransition from './components/CSSTransition'; 
+import CSSTransition from './components/CSSTransition';
+import BackgroundVideo from './components/BackgroundVideo';
 import ExpressIcon from '@/app/static/express.svg';
 import NginxIcon from '@/app/static/nginx.svg';
 import JavaIcon from '@/app/static/java.svg';
@@ -100,6 +101,13 @@ export default function Home(props: {
 
     return (
         <main style={{ position: 'relative', inset: 0, overflow: 'hidden' }}>
+            <BackgroundVideo
+                videoSrc="/static/background.mp4" 
+                audioSrc="/static/background-music.mp3"
+                muted={false}
+                autoPlay={true}
+                loop={true}
+            />
             <BuyMeCoffee />
            <header
                 className={`${styles.header} ${
