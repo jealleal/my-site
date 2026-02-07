@@ -65,20 +65,21 @@ export default function Home(props: {
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const clientHeight = document.documentElement.clientHeight;
+            const startLift = clientHeight * 0.1;
+            const endLift = clientHeight * 0.4;
             
-            if (scrollY > clientHeight * 0.3) {
+            if (scrollY > startLift) {
                 setIsScrolled(true);
             } else {
                 setIsScrolled(false);
             }
-            
-            const alpha = Math.max(0, clientHeight / 2 - scrollY) / (clientHeight / 2);
+            const alpha = Math.max(0, 1 - (scrollY / (clientHeight * 0.5)));
             const scroll_bottom = document.getElementById('scroll_bottom');
             if (scroll_bottom) {
                 scroll_bottom.style.opacity = alpha.toString();
             }
         };
-
+    
         window.addEventListener('scroll', handleScroll);
         handleScroll();
         
@@ -86,7 +87,6 @@ export default function Home(props: {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
     const projects_el = projects.map(project => (
         <Card key={project.id} project={project} />
     ));
@@ -204,46 +204,56 @@ export default function Home(props: {
                     Scroll down
                 </span>
             </header>
-            <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
-                <div className={styles.social}>
-                    <a
-                        href="https://github.com/jealleal"
-                        style={{ color: '#eeeeee', textDecoration: 'none' }}
-                        target="_blank"
-                    >
-                        <div className={styles.single}>
-                            <IconBrandGithub />
-                            <span>
-                                <b>GitHub</b>
-                            </span>
-                        </div>
-                    </a>
-                    <a
-                        href="/tg"
-                        style={{ color: '#eeeeee', textDecoration: 'none' }}
-                        target="_blank"
-                    >
-                        <div className={styles.single}>
-                            <IconBrandTelegram />
-                            <span>
-                                <b>Telegram</b>
-                            </span>
-                        </div>
-                    </a>
-                    <a
-                        href="/tgc"
-                        style={{ color: '#eeeeee', textDecoration: 'none' }}
-                        target="_blank"
-                    >
-                        <div className={styles.single}>
-                            <IconBrandTelegram />
-                            <span>
-                                <b>Channel</b>
-                            </span>
-                        </div>
-                    </a>
+            <CSSTransition
+                timeout={500}
+                state={!isScrolled}
+                classNames={{
+                    enter: styles.social_enter,
+                    exitActive: styles.social_lift
+                }}
+                mountOnExit
+            >
+                <div className={styles.social_container}>
+                    <div className={styles.social}>
+                        <a
+                            href="https://github.com/jealleal"
+                            style={{ color: '#eeeeee', textDecoration: 'none' }}
+                            target="_blank"
+                        >
+                            <div className={styles.single}>
+                                <IconBrandGithub />
+                                <span>
+                                    <b>GitHub</b>
+                                </span>
+                            </div>
+                        </a>
+                        <a
+                            href="/tg"
+                            style={{ color: '#eeeeee', textDecoration: 'none' }}
+                            target="_blank"
+                        >
+                            <div className={styles.single}>
+                                <IconBrandTelegram />
+                                <span>
+                                    <b>Telegram</b>
+                                </span>
+                            </div>
+                        </a>
+                        <a
+                            href="/tgc"
+                            style={{ color: '#eeeeee', textDecoration: 'none' }}
+                            target="_blank"
+                        >
+                            <div className={styles.single}>
+                                <IconBrandTelegram />
+                                <span>
+                                    <b>Channel</b>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </CSSTransition>
             <h1>
                 Основные <span className={styles.main_tech}>навыки</span>
             </h1>
