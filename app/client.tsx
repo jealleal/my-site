@@ -192,14 +192,14 @@ export default function Home(props: {
                             </div>
                         </div>
                     </Card3D>
-                    <CSSTransition
+                    <ReactCSSTransition
                         timeout={500}
                         state={!isScrolled}
                         classNames={{
-                            enter: styles.social_enter,
-                            enterActive: styles.social_enter_active,
-                            exit: styles.social_exit,
-                            exitActive: styles.social_exit_active
+                            enter: '',
+                            enterActive: '',
+                            exit: '',
+                            exitActive: ''
                         }}
                         mountOnExit
                     >
@@ -241,7 +241,7 @@ export default function Home(props: {
                                 </div>
                             </a>
                         </div>
-                    </CSSTransition>
+                    </ReactCSSTransition>
                 </div>
                 
                 <span
