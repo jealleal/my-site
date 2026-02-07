@@ -12,6 +12,8 @@ import JavaIcon from '@/app/static/java.svg';
 import NestIcon from '@/app/static/nest.svg';
 import LuaIcon from '@/app/static/lua.svg';
 import CsharpIcon from '@/app/static/csharp.svg';
+import TiktokIcon from '@/app/static/Tiktok.svg';
+
 import {
     IconBrandCloudflare,
     IconBrandCpp,
