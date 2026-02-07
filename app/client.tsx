@@ -189,6 +189,9 @@ export default function Home(props: {
                     Scroll down
                 </span>
             </header>
+            <h1>
+                Социальные <span className={styles.main_tech}>сети</span>
+            </h1>
             <div className={styles.social}>
                         <a
                             href="https://github.com/jealleal"
