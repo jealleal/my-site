@@ -104,7 +104,7 @@ export default function Home(props: {
         <main style={{ position: 'relative', inset: 0, overflow: 'hidden' }}>
             <BackgroundVideo
                 videoSrc="/static/background.mp4" 
-                audioSrc="/static/background-music.mp3"
+                audioSrc="/static/background.mp3"
                 muted={false}
                 autoPlay={true}
                 loop={true}
