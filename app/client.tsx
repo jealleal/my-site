@@ -197,8 +197,6 @@ export default function Home(props: {
                         state={!isScrolled}
                         classNames={{
                             enter: '',
-                            enterActive: '',
-                            exit: '',
                             exitActive: ''
                         }}
                         mountOnExit
