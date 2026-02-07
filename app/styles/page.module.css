@@ -10,6 +10,7 @@
 	align-items: center;
 	padding: 2rem;
 	box-sizing: border-box;
+	z-index: 10;
 }
 
 .animated {
@@ -97,35 +98,10 @@
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    .lanyardContainer {
-        max-width: 90%;
-        margin: 1.5rem auto;
-        padding: 0.75rem;
-    }
-    
-    .lanyardWrapper {
-        max-width: 95%;
-        padding: 0.75rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .lanyardContainer {
-        max-width: 100%;
-        margin: 1rem auto;
-        padding: 0.5rem;
-    }
-    
-    .lanyardWrapper {
-        max-width: 100%;
-        padding: 0.5rem;
-    }
-}
-
+/* Социальные кнопки */
 .social_container {
     position: fixed;
-    top: calc(100vh - 200px); /* Позиция внизу экрана */
+    top: calc(100vh - 200px);
     left: 0;
     right: 0;
     display: flex;
@@ -146,7 +122,7 @@
 
 .social_lift {
     opacity: 0.9;
-    transform: translateY(calc(-100vh + 250px)); /* Поднимаем почти к lanyard */
+    transform: translateY(calc(-100vh + 250px));
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
@@ -186,37 +162,10 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-@media(max-width: 970px) {
-    .social_container {
-        top: calc(100vh - 180px);
-        position: absolute; /* На мобильных не fixed */
-    }
-    
-    .social_lift {
-        transform: translateY(calc(-100vh + 280px));
-    }
-    
-    .social {
-        max-width: 90%;
-        padding: 1rem;
-    }
+.single span {
+    font-size: 1.1rem;
+    font-weight: 600;
 }
-
-@media(max-width: 512px) {
-    .social {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-    
-    .single {
-        width: 200px;
-        justify-content: center;
-    }
-    
-    .social_lift {
-        transform: translateY(calc(-100vh + 320px));
-    }
 
 .main_tech {
 	color: #E2CC00;
@@ -233,7 +182,6 @@
 	display: grid;
 	gap: 2rem;
 	grid-template-columns: repeat(auto-fill, 5rem);
-
 }
 
 .tech img {
@@ -269,7 +217,6 @@
 		transform: translateY(0) scale(1);
 	}
 }
-
 
 .avatar_bubble {
 	display: flex;
@@ -322,7 +269,6 @@
 	width: 9rem !important;
 	top: -5.3rem;
 	right: 7.4rem;
-
 	transform: scale(-1.4, 1.4) rotate(4deg);
 }
 
@@ -331,13 +277,10 @@
 	z-index: 99;
 	top: .5rem;
 	right: 0;
-
 	transform: translateX(calc(100% - (1rem + 24px)));
-
 	display: flex;
 	align-items: center;
 	gap: .5rem;
-
 	background-color: var(--buttons-color);
 	padding: .5rem;
 	border-radius: 8px 0 0 8px;
@@ -346,7 +289,6 @@
 	color: white;
 	cursor: pointer;
 	text-decoration: none;
-
 	transition: transform 250ms;
 }
 
@@ -362,7 +304,6 @@
 	height: auto;
 	aspect-ratio: 1;
 	transform: translate(calc((50% - 12px) * -1), calc((50% - 12px) * -1));
-
 	filter: blur(60px);
 }
 
@@ -375,6 +316,7 @@
 	transform: translateX(0px);
 }
 
+/* Адаптив */
 @media(max-width: 970px) {
 	.nicks {
 		flex-direction: column;
@@ -393,16 +335,22 @@
 		width: 80%;
 	}
 
+	.social_container {
+		top: calc(100vh - 180px);
+		position: absolute;
+	}
+	
+	.social_lift {
+		transform: translateY(calc(-100vh + 280px));
+	}
+	
 	.social {
-		flex-direction: column;
+		max-width: 90%;
+		padding: 1rem;
 	}
 
 	.scroll_bottom {
 		display: none;
-	}
-
-	.single {
-		justify-content: center;
 	}
 
 	.header_birthday {
@@ -414,4 +362,33 @@
 	.tech {
 		justify-content: center;
 	}
+	
+	.social {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.8rem;
+	}
+	
+	.single {
+		width: 200px;
+		justify-content: center;
+	}
+	
+	.social_lift {
+		transform: translateY(calc(-100vh + 320px));
+	}
+}
+
+@media (max-width: 768px) {
+    .lanyardWrapper {
+        max-width: 95%;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lanyardWrapper {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
 }
