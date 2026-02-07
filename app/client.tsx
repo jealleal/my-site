@@ -151,7 +151,7 @@ export default function Home(props: {
                     <div className={styles.hello}>
                         <h2>Привет👋</h2>
                         <p style={{ marginTop: '3px' }}>
-                            Я <b>jealleal</b> – fullstack программист на питоне и luau.
+                            Я <b>jealleal</b> – fullstack программист.
                             В свободное время занимаюсь разработкой сайтов, 
                             иногда пишу Телеграм или Дискорд ботов, сервера и утилиты.
                             Делаю разные игры в роблоксе, пытаюсь заработать.
@@ -291,14 +291,10 @@ export default function Home(props: {
                         <span>Express.js</span>
                     </div>
                     <div>
-                        <StaticTooltip title="*В том числе и luau">
+                        <StaticTooltip title="luau в том числе">
                             <LuaIcon {...techIconProps} />
                         </StaticTooltip>
                         <span style={{ textWrap: 'nowrap' }}>Lua</span>
-                    </div>
-                    <div>
-                        <NginxIcon {...techIconProps} />
-                        <span>Nginx</span>
                     </div>
                     <div>
                         <IconBrandRust {...techIconProps} />
