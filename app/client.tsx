@@ -172,8 +172,8 @@ export default function Home(props: {
                             <CurrentTime initial={props.timeServer} />
                         </p>
                     </div>
-                    <img alt="Дискорд Профиль" src="https://corsproxy.io/?url=https://lanyard.cnrad.dev/api/1158811379017449473?bg=0a0a0a&showDisplayName=true&hideActivity=true" />
                     <div className={styles.social}>
+                        <img alt="Дискорд Профиль" src="https://lanyard.cnrad.dev/api/1158811379017449473?bg=0a0a0a&showDisplayName=true&hideActivity=true" />
                         <a
                             href="https://github.com/jealleal"
                             style={{ color: '#eeeeee', textDecoration: 'none' }}
@@ -183,6 +183,18 @@ export default function Home(props: {
                                 <IconBrandGithub />
                                 <span>
                                     <b>GitHub</b>
+                                </span>
+                            </div>
+                        </a>
+                        <a
+                            href="https://tiktok.com/@jealleal"
+                            style={{ color: '#eeeeee', textDecoration: 'none' }}
+                            target="_blank"
+                        >
+                            <div className={styles.single}>
+                                <TiktokIcon />
+                                <span>
+                                    <b>TikTok</b>
                                 </span>
                             </div>
                         </a>
