@@ -176,7 +176,7 @@ export default function Home(props: {
                         <div className={styles.lanyardWrapper}>
                             <img 
                                 href="https://discord.com/users/1158811379017449473"
-                                src="https://lanyard.cnrad.dev/api/1158811379017449473?bg=1e1e1ecc&showDisplayName=true&hideActivity=true"
+                                src="https://lanyard.cnrad.dev/api/1158811379017449473?bg=1e1e1e&showDisplayName=true&hideActivity=true"
                                 className={styles.profileCard}
                             />
                         </div>
