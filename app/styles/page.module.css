@@ -135,7 +135,7 @@
     justify-content: center;
     margin: 1.5rem 0 0 0;
     animation: main_anim 1s cubic-bezier(.4, 0, .2, 1) 0.3s both;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.5, 1);
     transform: translateY(0);
     opacity: 1;
 }
@@ -164,7 +164,7 @@
 
 .social_exit_active {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-300px);
     transition: opacity 500ms, transform 500ms;
 }
 
