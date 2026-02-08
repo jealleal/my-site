@@ -135,13 +135,13 @@
     justify-content: center;
     margin: 1.5rem 0 0 0;
     animation: main_anim 1s cubic-bezier(.4, 0, .2, 1) 0.3s both;
-    transition: margin 0.5s cubic-bezier(0.4, 0, 0.5, 1);
+    transition: margin-top 0.5s cubic-bezier(0.4, 0, 0.5, 1);
     transform: translateY(0);
     opacity: 1;
 }
 
 .social_scrolled {
-    margin: -2rem 0 0 0 !important; 
+    /* margin будет установлен через JavaScript */
 }
 
 .social {
@@ -156,13 +156,7 @@
 
 @media (max-width: 970px) {
     .social_container {
-        margin: 1rem 0 0 0;
-    }
-    
-    .social_scrolled {
         margin: 1rem 0 0 0 !important;
-        transform: translateY(0);
-        opacity: 1;
     }
     
     .social {
@@ -172,7 +166,7 @@
 
 @media (max-width: 768px) {
     .social_container {
-        margin: 1rem 0 0 0;
+        margin: 1rem 0 0 0 !important;
     }
     
     .social {
@@ -193,7 +187,7 @@
 
 @media (max-width: 480px) {
     .social_container {
-        margin: 0.75rem 0 0 0;
+        margin: 0.75rem 0 0 0 !important;
     }
     
     .social {
