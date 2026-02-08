@@ -25,12 +25,15 @@ import {
     IconBrandGithub,
     IconBrandHtml5,
     IconBrandJavascript,
+    IconBrandSpotify,
     IconBrandNextjs,
+    IconBrandRoblox,
     IconBrandNodejs,
     IconBrandPrisma,
     IconBrandPython,
     IconBrandReact,
     IconBrandRust,
+    IconBrandSteam,
     IconBrandTelegram,
     IconBrandTiktok,
     IconBrandTypescript,
@@ -231,6 +234,42 @@ export default function Home(props: {
                             <IconBrandGithub />
                             <span>
                                 <b>GitHub</b>
+                            </span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://steamcommunity.com/id/JealLeal"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
+                        target="_blank"
+                    >
+                        <div className={styles.single}>
+                            <IconBrandSteam />
+                            <span>
+                                <b>Steam</b>
+                            </span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://roblox.com/users/189788555/profile"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
+                        target="_blank"
+                    >
+                        <div className={styles.single}>
+                            <IconBrandRoblox />
+                            <span>
+                                <b>Roblox</b>
+                            </span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://open.spotify.com/user/31k32p5eh4wyoof6pwdkjoioj4se"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
+                        target="_blank"
+                    >
+                        <div className={styles.single}>
+                            <IconBrandSpotify />
+                            <span>
+                                <b>Spotify</b>
                             </span>
                         </div>
                     </a>
