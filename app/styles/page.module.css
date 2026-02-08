@@ -170,13 +170,20 @@
 
 .social {
     display: flex;
-    flex-wrap: nowrap; 
+    flex-direction: column;
     gap: 1rem;
     justify-content: center;
-    max-width: 600px;
+    align-items: stretch; 
+    max-width: 380px; 
     margin: 0 auto;
     padding: 0 1rem;
 }
+
+.social a {
+    width: 100%;
+}
+
+
 
 @media (max-width: 970px) {
     .social {
@@ -207,7 +214,6 @@
     .social {
         gap: 0.5rem;
         padding: 0 0.5rem;
-        flex-wrap: nowrap;
         justify-content: space-between;
     }
     
@@ -223,19 +229,8 @@
 }
 
 .single {
-    cursor: pointer;
-    border: 2px solid var(--border-color);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding: 1rem 2rem;
-    background-color: var(--buttons-color);
-    transition: all 0.3s ease;
-    gap: 1rem;
-    min-width: 160px;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .single:hover {
