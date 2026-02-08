@@ -142,17 +142,8 @@
 
 .social_scrolled {
     margin: 0 !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-300px);
+    opacity: 0.9;
 }
 
 .social_enter {
@@ -179,12 +170,12 @@
 
 .social {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
+    align-items: stretch;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 0 1rem;
 }
 
@@ -204,18 +195,8 @@
         padding: 0 0.75rem;
     }
     
-    .single {
-        padding: 0.75rem 1.5rem;
-        min-width: 130px;
-    }
-    
     .single span {
-        font-size: 0.95rem;
-    }
-    
-    .single svg {
-        width: 1.1rem;
-        height: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -230,71 +211,41 @@
         justify-content: space-between;
     }
     
-    .single {
-        padding: 0.6rem 1rem;
-        min-width: auto;
-        flex: 1;
-        gap: 0.5rem;
-    }
-    
     .single svg {
-        width: 1rem;
-        height: 1rem;
+        width: 1.2rem;
+        height: 1.2rem;
     }
     
     .single span {
         font-size: 0.85rem;
         text-align: center;
     }
-    
-    @media (max-width: 380px) {
-        .social {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        
-        .single {
-            width: 100%;
-            max-width: 250px;
-            margin: 0 auto;
-        }
-    }
 }
 
 .single {
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    border-radius: 1rem;
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.875rem 1.75rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    flex-direction: row;
+    padding: 1rem 2rem;
+    background-color: var(--buttons-color);
     transition: all 0.3s ease;
-    cursor: pointer;
-    font-family: inherit;
-    color: #eeeeee;
-    min-width: 140px;
+    gap: 1rem;
+    min-width: 160px;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .single:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.3);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.single svg {
-    width: 1.25rem;
-    height: 1.25rem;
-    stroke-width: 1.5;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .single span {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
