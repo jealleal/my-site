@@ -212,7 +212,7 @@
     }
     
     .single svg {
-        width: 1.2rem;
+        max-width: 1.2rem;
         height: 1.2rem;
     }
     
@@ -233,7 +233,7 @@
     background-color: var(--buttons-color);
     transition: all 0.3s ease;
     gap: 1rem;
-    min-width: 160px;
+    min-width: 500px;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
