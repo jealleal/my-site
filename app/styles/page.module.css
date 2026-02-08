@@ -170,7 +170,7 @@
 
 .social {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; 
     gap: 1rem;
     justify-content: center;
     max-width: 600px;
