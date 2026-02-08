@@ -30,7 +30,7 @@ const quaasr_more = (
     </>
 );
 
-export const projects = [
+export const projects: ProjectProp[] = [
     {
         id: 'quasar',
         title: 'Quasar Multitool',
@@ -58,29 +58,3 @@ export const projects = [
         ]
     }
 ];
-
-export const projects: ProjectProp[] = [
-    {
-        id: 'quasar',
-        title: 'Quasar Multitool',
-        creation_date: '01.06.2023',
-        tags: ['Python', 'Roblox', 'Cookie', 'Multitool'],
-        icon: {
-            url: '/static/quasar.jpg',
-            color: '#53377a'
-        },
-        short_description: quaasr,
-        full_description: quaasr_more,
-        links: [
-            {
-                title: 'Сайт',
-                url: 'https://quasar.gt.tc/'
-            },
-            {
-                title: 'Сборник всех репозиториев',
-                url: 'https://github.com/QuasarRBX'
-            }
-        ]
-    }
-];
-
