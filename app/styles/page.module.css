@@ -398,13 +398,6 @@
         width: 90%;
         margin-bottom: 2.5rem;
     }
-    
-    h1 {
-        font-size: 2.2rem;
-        margin: 2rem 0 1.5rem 0;
-        text-align: center;
-        padding: 0 0.5rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -520,12 +513,6 @@
     .stack h1 {
         font-size: 1.3rem;
         margin-top: 2rem;
-    }
-    
-    h1 {
-        font-size: 1.8rem;
-        margin: 1.5rem 0 1rem 0;
-        padding: 0 0.5rem;
     }
     
     .buyMeACoffee {
