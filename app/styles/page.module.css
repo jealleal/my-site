@@ -141,9 +141,9 @@
 }
 
 .social_scrolled {
-    margin-top: calc(-100vh + 1rem);
+    transform: translateY(var(--social-offset));
+    opacity: 0.9;
 }
-
 
 .social_enter {
     opacity: 0;
