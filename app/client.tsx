@@ -222,14 +222,14 @@ export default function Home(props: {
                     Scroll down
                 </span>
             </header>
-           <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
+            <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
                 <div className={styles.social}>
                     
                         href="https://github.com/jealleal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
                     >
-                        <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandGithub />
                             <span><b>GitHub</b></span>
                         </div>
@@ -239,7 +239,7 @@ export default function Home(props: {
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
                     >
-                        <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandSteam />
                             <span><b>Steam</b></span>
                         </div>
@@ -249,7 +249,7 @@ export default function Home(props: {
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
                     >
-                        <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandRoblox />
                             <span><b>Roblox</b></span>
                         </div>
@@ -259,7 +259,7 @@ export default function Home(props: {
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
                     >
-                        <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandSpotify />
                             <span><b>Spotify</b></span>
                         </div>
@@ -269,7 +269,7 @@ export default function Home(props: {
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
                     >
-                        <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTelegram />
                             <span><b>Telegram</b></span>
                         </div>
@@ -279,7 +279,7 @@ export default function Home(props: {
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
                     >
-                        <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTiktok />
                             <span><b>Tiktok</b></span>
                         </div>
@@ -289,7 +289,7 @@ export default function Home(props: {
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
                     >
-                        <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTelegram />
                             <span><b>Channel</b></span>
                         </div>
