@@ -15,7 +15,8 @@ import NestIcon from '@/app/static/nest.svg';
 import LuaIcon from '@/app/static/lua.svg';
 import CsharpIcon from '@/app/static/csharp.svg';
 import TiktokIcon from '@/app/static/Tiktok.svg';
-
+const socialRef = useRef<HTMLDivElement>(null);
+const lanyardRef = useRef<HTMLDivElement>(null);
 
 import {
     IconBrandCloudflare,
@@ -64,54 +65,44 @@ export default function Home(props: {
     const [isScrolled, setIsScrolled] = useState(false);
     
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
-            const clientHeight = document.documentElement.clientHeight;
-            
-            if (scrollY > clientHeight * 0.3) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-            
-            const alpha = Math.max(0, clientHeight / 2 - scrollY) / (clientHeight / 2);
-            const scroll_bottom = document.getElementById('scroll_bottom');
-            if (scroll_bottom) {
-                scroll_bottom.style.opacity = alpha.toString();
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-        
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    useEffect(() => {
-        const social = document.querySelector(`.${styles.social_container}`) as HTMLElement;
-        const lanyard = document.querySelector(`.${styles.lanyardWrapper}`) as HTMLElement;
+        const social = socialRef.current;
+        const lanyard = lanyardRef.current;
     
         if (!social || !lanyard) return;
     
-        const updateOffset = () => {
-            const lanyardRect = lanyard.getBoundingClientRect();
-            const socialRect = social.getBoundingClientRect();
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const clientHeight = document.documentElement.clientHeight;
     
-            const offset = lanyardRect.bottom - socialRect.top + 8; // 8px отступ
-            social.style.setProperty('--social-offset', `-${offset}px`);
+            const scrolled = scrollY > clientHeight * 0.3;
+            setIsScrolled(scrolled);
+    
+            const alpha = Math.max(0, clientHeight / 2 - scrollY) / (clientHeight / 2);
+            const scrollBottom = document.getElementById('scroll_bottom');
+            if (scrollBottom) {
+                scrollBottom.style.opacity = alpha.toString();
+            }
+    
+            if (scrolled) {
+                const lanyardRect = lanyard.getBoundingClientRect();
+                const socialRect = social.getBoundingClientRect();
+    
+                const offset = lanyardRect.bottom - socialRect.top + 8;
+                social.style.transform = `translateY(${offset}px)`;
+            } else {
+                social.style.transform = 'translateY(0)';
+            }
         };
     
-        updateOffset();
-        window.addEventListener('resize', updateOffset);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
     
-        return () => window.removeEventListener('resize', updateOffset);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        };
     }, []);
-    
-        const projects_el = projects.map(project => (
-        <Card key={project.id} project={project} />
-    ));
 
     const scrollDown = () => {
         window.scrollTo({
@@ -212,7 +203,7 @@ export default function Home(props: {
                     </div>
                     <Card3D>
                         <div className={styles.profileSection}>
-                            <div className={styles.lanyardWrapper}>
+                            <div ref={lanyardRef} className={styles.lanyardWrapper}>
                                 <a 
                                     href="https://discord.com/users/1158811379017449473"
                                     target="_blank"
@@ -239,7 +230,7 @@ export default function Home(props: {
                     Scroll down
                 </span>
             </header>
-            <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
+            <div ref={socialRef} className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
                 <div className={styles.social}>
                     <a
                         href="https://github.com/jealleal"
