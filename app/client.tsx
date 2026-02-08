@@ -68,29 +68,9 @@ export default function Home(props: {
             const scrollY = window.scrollY;
             const clientHeight = document.documentElement.clientHeight;
             
-            const lanyardWrapper = document.querySelector(`.${styles.lanyardWrapper}`);
-            const socialContainer = document.querySelector(`.${styles.social_container}`) as HTMLElement;
-            
-            if (lanyardWrapper && socialContainer && window.innerWidth > 970) {
-                const lanyardRect = lanyardWrapper.getBoundingClientRect();
-                const socialRect = socialContainer.getBoundingClientRect();
-
-                const desiredGap = 20; 
-                
-                const currentGap = socialRect.top - lanyardRect.bottom;
-                if (scrollY > clientHeight * 0.15) {
-                    setIsScrolled(true);
-                    
-                    const neededOffset = currentGap - desiredGap;
-                    
-                    if (neededOffset > 0) {
-                        socialContainer.style.marginTop = `-${neededOffset}px`;
-                    }
-                } else {
-                    setIsScrolled(false);
-                    socialContainer.style.marginTop = '1.5rem';
-                }
-            } else if (window.innerWidth <= 970) {
+            if (scrollY > clientHeight * 0.3) {
+                setIsScrolled(true);
+            } else {
                 setIsScrolled(false);
             }
             
@@ -100,14 +80,12 @@ export default function Home(props: {
                 scroll_bottom.style.opacity = alpha.toString();
             }
         };
-    
+
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleScroll);
         handleScroll();
         
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleScroll);
         };
     }, []);
 
@@ -221,7 +199,7 @@ export default function Home(props: {
                                     rel="noopener noreferrer"
                                 >
                                     <img 
-                                        src="https://camo.githubusercontent.com/f333d0c1d6ac5ac1db3747a12cd3304952318b87505097b7e0ce27db9b9a070a/68747470733a2f2f6c616e796172642e636e7261642e6465762f6170692f313135383831313337393031373434393437333f62673d2673686f77446973706c61794e616d653d74727565266869646541637469766974793d74727565"
+                                        src="https://lanyard.cnrad.dev/api/1158811379017449473?showDisplayName=true&hideActivity=true&theme=dark&bg="
                                         alt="Discord Profile"
                                         className={styles.profileCard}
                                     />
