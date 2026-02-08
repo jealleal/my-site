@@ -65,17 +65,7 @@ export default function Home(props: {
     const socialRef = useRef<HTMLDivElement>(null);
     const lanyardRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        const onScroll = () => {
-            const h = document.documentElement.clientHeight;
-            setIsScrolled(window.scrollY > h * 0.3);
-        };
-    
-        window.addEventListener('scroll', onScroll);
-        onScroll();
-    
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
+    useEffect(() => { const social = socialRef.current; const lanyard = lanyardRef.current; if (!social || !lanyard) return; const handleScroll = () => { const scrollY = window.scrollY; const clientHeight = document.documentElement.clientHeight; const scrolled = scrollY > clientHeight * 0.3; setIsScrolled(scrolled); const alpha = Math.max(0, clientHeight / 2 - scrollY) / (clientHeight / 2); const scrollBottom = document.getElementById('scroll_bottom'); if (scrollBottom) { scrollBottom.style.opacity = alpha.toString(); } if (scrolled) { const lanyardRect = lanyard.getBoundingClientRect(); const socialRect = social.getBoundingClientRect(); const offset = lanyardRect.bottom - socialRect.top + 8; social.style.transform = translateY(${offset}px); } else { social.style.transform = 'translateY(0)'; } }; handleScroll(); window.addEventListener('scroll', handleScroll); window.addEventListener('resize', handleScroll); return () => { window.removeEventListener('scroll', handleScroll); window.removeEventListener('resize', handleScroll); }; }, []);
 
     const projects_el = projects.map(project => ( <Card key={project.id} project={project} /> ));
 
@@ -185,7 +175,7 @@ export default function Home(props: {
                                     rel="noopener noreferrer"
                                 >
                                     <img 
-                                        src="https://camo.githubusercontent.com/b24d3c2ac2f07ee2b1160357c42bead5220270c5b07491918aa12d007594bbd0/68747470733a2f2f6c616e796172642e636e7261642e6465762f6170692f313135383831313337393031373434393437333f62673d3064313131372673686f77446973706c61794e616d653d74727565266869646541637469766974793d74727565"
+                                        src="https://camo.githubusercontent.com/f333d0c1d6ac5ac1db3747a12cd3304952318b87505097b7e0ce27db9b9a070a/68747470733a2f2f6c616e796172642e636e7261642e6465762f6170692f313135383831313337393031373434393437333f62673d2673686f77446973706c61794e616d653d74727565266869646541637469766974793d74727565"
                                         alt="Discord Profile"
                                         className={styles.profileCard}
                                     />
