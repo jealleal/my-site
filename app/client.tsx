@@ -202,7 +202,7 @@ export default function Home(props: {
                                     rel="noopener noreferrer"
                                 >
                                     <img 
-                                        src="https://lanyard.cnrad.dev/api/1158811379017449473?showDisplayName=true&hideActivity=true&theme=dark&bg="
+                                        src="https://camo.githubusercontent.com/f333d0c1d6ac5ac1db3747a12cd3304952318b87505097b7e0ce27db9b9a070a/68747470733a2f2f6c616e796172642e636e7261642e6465762f6170692f313135383831313337393031373434393437333f62673d2673686f77446973706c61794e616d653d74727565266869646541637469766974793d74727565"
                                         alt="Discord Profile"
                                         className={styles.profileCard}
                                     />
