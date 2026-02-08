@@ -67,22 +67,30 @@ export default function Home(props: {
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const clientHeight = document.documentElement.clientHeight;
-
+            
             const lanyardWrapper = document.querySelector(`.${styles.lanyardWrapper}`);
-            const socialContainer = document.querySelector(`.${styles.social_container}`);
+            const socialContainer = document.querySelector(`.${styles.social_container}`) as HTMLElement;
             
             if (lanyardWrapper && socialContainer && window.innerWidth > 970) {
                 const lanyardRect = lanyardWrapper.getBoundingClientRect();
-                const lanyardBottom = lanyardRect.bottom + scrollY;
                 const socialRect = socialContainer.getBoundingClientRect();
-                const socialTop = socialRect.top + scrollY;
+
+                const desiredGap = 20; 
                 
-                if (scrollY > clientHeight * 0.2) {
+                const currentGap = socialRect.top - lanyardRect.bottom;
+                if (scrollY > clientHeight * 0.15) {
                     setIsScrolled(true);
+                    
+                    const neededOffset = currentGap - desiredGap;
+                    
+                    if (neededOffset > 0) {
+                        socialContainer.style.marginTop = `-${neededOffset}px`;
+                    }
                 } else {
                     setIsScrolled(false);
+                    socialContainer.style.marginTop = '1.5rem';
                 }
-            } else {
+            } else if (window.innerWidth <= 970) {
                 setIsScrolled(false);
             }
             
@@ -94,10 +102,12 @@ export default function Home(props: {
         };
     
         window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
         handleScroll();
         
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
         };
     }, []);
 
