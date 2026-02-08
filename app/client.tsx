@@ -89,7 +89,27 @@ export default function Home(props: {
         };
     }, []);
 
-    const projects_el = projects.map(project => (
+    useEffect(() => {
+        const social = document.querySelector(`.${styles.social_container}`) as HTMLElement;
+        const lanyard = document.querySelector(`.${styles.lanyardWrapper}`) as HTMLElement;
+    
+        if (!social || !lanyard) return;
+    
+        const updateOffset = () => {
+            const lanyardRect = lanyard.getBoundingClientRect();
+            const socialRect = social.getBoundingClientRect();
+    
+            const offset = lanyardRect.bottom - socialRect.top + 8; // 8px отступ
+            social.style.setProperty('--social-offset', `-${offset}px`);
+        };
+    
+        updateOffset();
+        window.addEventListener('resize', updateOffset);
+    
+        return () => window.removeEventListener('resize', updateOffset);
+    }, []);
+    
+        const projects_el = projects.map(project => (
         <Card key={project.id} project={project} />
     ));
 
