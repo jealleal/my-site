@@ -15,8 +15,6 @@ import NestIcon from '@/app/static/nest.svg';
 import LuaIcon from '@/app/static/lua.svg';
 import CsharpIcon from '@/app/static/csharp.svg';
 import TiktokIcon from '@/app/static/Tiktok.svg';
-const socialRef = useRef<HTMLDivElement>(null);
-const lanyardRef = useRef<HTMLDivElement>(null);
 
 import {
     IconBrandCloudflare,
@@ -63,7 +61,10 @@ export default function Home(props: {
     age: number;
 }) {
     const [isScrolled, setIsScrolled] = useState(false);
-    
+
+    const socialRef = useRef<HTMLDivElement>(null);
+    const lanyardRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
         const social = socialRef.current;
         const lanyard = lanyardRef.current;
