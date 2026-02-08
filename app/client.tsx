@@ -67,9 +67,21 @@ export default function Home(props: {
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const clientHeight = document.documentElement.clientHeight;
+
+            const lanyardWrapper = document.querySelector(`.${styles.lanyardWrapper}`);
+            const socialContainer = document.querySelector(`.${styles.social_container}`);
             
-            if (scrollY > clientHeight * 0.3) {
-                setIsScrolled(true);
+            if (lanyardWrapper && socialContainer && window.innerWidth > 970) {
+                const lanyardRect = lanyardWrapper.getBoundingClientRect();
+                const lanyardBottom = lanyardRect.bottom + scrollY;
+                const socialRect = socialContainer.getBoundingClientRect();
+                const socialTop = socialRect.top + scrollY;
+                
+                if (scrollY > clientHeight * 0.2) {
+                    setIsScrolled(true);
+                } else {
+                    setIsScrolled(false);
+                }
             } else {
                 setIsScrolled(false);
             }
@@ -80,7 +92,7 @@ export default function Home(props: {
                 scroll_bottom.style.opacity = alpha.toString();
             }
         };
-
+    
         window.addEventListener('scroll', handleScroll);
         handleScroll();
         
