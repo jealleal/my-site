@@ -35,7 +35,7 @@ const CurrentTime = ({ initial }: { initial: string }) => {
                 style={{ color: 'grey', fontSize: '.9rem' }}
                 className={zedMono.className}
             >
-                UTC+3
+                UTC+2
             </span>
         </>
     );
