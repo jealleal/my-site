@@ -228,83 +228,84 @@ export default function Home(props: {
                         href="https://github.com/jealleal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
-                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles.single}>
                             <IconBrandGithub />
-                            <span><b>GitHub</b></span>
+                            <span>
+                                <b>GitHub</b>
+                            </span>
                         </div>
                     </a>
-                    
                     <a
                         href="https://steamcommunity.com/id/JealLeal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
-                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles.single}>
                             <IconBrandSteam />
-                            <span><b>Steam</b></span>
+                            <span>
+                                <b>Steam</b>
+                            </span>
                         </div>
                     </a>
-                    
                     <a
                         href="https://roblox.com/users/189788555/profile"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
-                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles.single}>
                             <IconBrandRoblox />
-                            <span><b>Roblox</b></span>
+                            <span>
+                                <b>Roblox</b>
+                            </span>
                         </div>
                     </a>
-                    
                     <a
                         href="https://open.spotify.com/user/31k32p5eh4wyoof6pwdkjoioj4se"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
-                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles.single}>
                             <IconBrandSpotify />
-                            <span><b>Spotify</b></span>
+                            <span>
+                                <b>Spotify</b>
+                            </span>
                         </div>
                     </a>
-                    
                     <a
                         href="/tg"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
-                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles.single}>
                             <IconBrandTelegram />
-                            <span><b>Telegram</b></span>
+                            <span>
+                                <b>Telegram</b>
+                            </span>
                         </div>
                     </a>
-                    
                     <a
                         href="https://tiktok.com/@jealleal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
-                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles.single}>
                             <IconBrandTiktok />
-                            <span><b>Tiktok</b></span>
+                            <span>
+                                <b>Tiktok</b>
+                            </span>
                         </div>
                     </a>
-                    
                     <a
                         href="/tgc"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
-                        <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
+                        <div className={styles.single}>
                             <IconBrandTelegram />
-                            <span><b>Channel</b></span>
+                            <span>
+                                <b>Channel</b>
+                            </span>
                         </div>
                     </a>
                 </div>
