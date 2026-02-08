@@ -193,11 +193,17 @@ export default function Home(props: {
                     <Card3D>
                         <div className={styles.profileSection}>
                             <div className={styles.lanyardWrapper}>
-                                <img 
-                                    src="https://lanyard.cnrad.dev/api/1158811379017449473?showDisplayName=true&hideActivity=true&theme=dark&bg="
-                                    alt="Discord Profile"
-                                    className={styles.profileCard}
-                                />
+                                <a 
+                                    href="https://discord.com/users/1158811379017449473"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img 
+                                        src="https://lanyard.cnrad.dev/api/1158811379017449473?showDisplayName=true&hideActivity=true&theme=dark&bg="
+                                        alt="Discord Profile"
+                                        className={styles.profileCard}
+                                    />
+                                </a>
                             </div>
                         </div>
                     </Card3D>
