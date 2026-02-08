@@ -104,6 +104,8 @@ export default function Home(props: {
         };
     }, []);
 
+    const projects_el = projects.map(project => ( <Card key={project.id} project={project} /> ));
+
     const scrollDown = () => {
         window.scrollTo({
             top: document.documentElement.clientHeight,
