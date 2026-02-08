@@ -348,6 +348,11 @@
     text-shadow: 0px 0px 120px #0cb8af;
 }
 
+.social_txt {
+    color: #8b00ff;
+    text-shadow: 0px 0px 120px #8b00ff;
+}
+
 @keyframes main_anim {
     0% {
         opacity: 0;
