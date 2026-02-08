@@ -224,7 +224,7 @@ export default function Home(props: {
             </header>
             <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
                 <div className={styles.social}>
-                    
+                    <a>
                         href="https://github.com/jealleal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
@@ -234,7 +234,7 @@ export default function Home(props: {
                             <span><b>GitHub</b></span>
                         </div>
                     </a>
-                    
+                    <a>
                         href="https://steamcommunity.com/id/JealLeal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
@@ -244,7 +244,7 @@ export default function Home(props: {
                             <span><b>Steam</b></span>
                         </div>
                     </a>
-                    
+                    <a>
                         href="https://roblox.com/users/189788555/profile"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
@@ -254,7 +254,7 @@ export default function Home(props: {
                             <span><b>Roblox</b></span>
                         </div>
                     </a>
-                    
+                    <a>
                         href="https://open.spotify.com/user/31k32p5eh4wyoof6pwdkjoioj4se"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
@@ -264,7 +264,7 @@ export default function Home(props: {
                             <span><b>Spotify</b></span>
                         </div>
                     </a>
-                    
+                    <a>
                         href="/tg"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
@@ -274,7 +274,7 @@ export default function Home(props: {
                             <span><b>Telegram</b></span>
                         </div>
                     </a>
-                    
+                    <a>
                         href="https://tiktok.com/@jealleal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
@@ -284,7 +284,7 @@ export default function Home(props: {
                             <span><b>Tiktok</b></span>
                         </div>
                     </a>
-                    
+                    <a>
                         href="/tgc"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
