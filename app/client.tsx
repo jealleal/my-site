@@ -224,76 +224,76 @@ export default function Home(props: {
             </header>
            <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
                 <div className={styles.social}>
-                    <Link
+                    
                         href="https://github.com/jealleal"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
                     >
                         <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandGithub />
-                            <p style={{ fontFamily: 'inherit', margin: 0 }}><b>GitHub</b></p>
+                            <span><b>GitHub</b></span>
                         </div>
-                    </Link>
-                    <Link
+                    </a>
+                    
                         href="https://steamcommunity.com/id/JealLeal"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
                     >
                         <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandSteam />
-                            <p style={{ fontFamily: 'inherit', margin: 0 }}><b>Steam</b></p>
+                            <span><b>Steam</b></span>
                         </div>
-                    </Link>
-                    <Link
+                    </a>
+                    
                         href="https://roblox.com/users/189788555/profile"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
                     >
                         <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandRoblox />
-                            <p style={{ fontFamily: 'inherit', margin: 0 }}><b>Roblox</b></p>
+                            <span><b>Roblox</b></span>
                         </div>
-                    </Link>
-                    <Link
+                    </a>
+                    
                         href="https://open.spotify.com/user/31k32p5eh4wyoof6pwdkjoioj4se"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
                     >
                         <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandSpotify />
-                            <p style={{ fontFamily: 'inherit', margin: 0 }}><b>Spotify</b></p>
+                            <span><b>Spotify</b></span>
                         </div>
-                    </Link>
-                    <Link
+                    </a>
+                    
                         href="/tg"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
                     >
                         <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTelegram />
-                            <p style={{ fontFamily: 'inherit', margin: 0 }}><b>Telegram</b></p>
+                            <span><b>Telegram</b></span>
                         </div>
-                    </Link>
-                    <Link
+                    </a>
+                    
                         href="https://tiktok.com/@jealleal"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
                     >
                         <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTiktok />
-                            <p style={{ fontFamily: 'inherit', margin: 0 }}><b>Tiktok</b></p>
+                            <span><b>Tiktok</b></span>
                         </div>
-                    </Link>
-                    <Link
+                    </a>
+                    
                         href="/tgc"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
-                        style={{ textDecoration: 'none' }}
                     >
                         <div className={`${styles_pr.button}`} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTelegram />
-                            <p style={{ fontFamily: 'inherit', margin: 0 }}><b>Channel</b></p>
+                            <span><b>Channel</b></span>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             </div>
             <h1>
