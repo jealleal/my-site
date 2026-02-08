@@ -222,6 +222,39 @@
     }
 }
 
+@media (max-width: 768px) {
+    .single {
+        min-width: unset; 
+        width: 100%;
+        max-width: 100%;
+        padding: 0.8rem 1rem;
+        margin: 0 auto;
+        box-sizing: border-box; 
+    }
+    
+    .social {
+        width: 100%;
+        padding: 0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .single {
+        padding: 0.7rem 0.9rem; 
+        border-radius: 0.8rem; 
+    }
+    
+    .single span {
+        font-size: 0.9rem; 
+    }
+    
+    .single svg {
+        width: 1.1rem; 
+        height: 1.1rem;
+    }
+}
+
+
 .single {
     cursor: pointer;
     border: 2px solid var(--border-color);
