@@ -66,43 +66,15 @@ export default function Home(props: {
     const lanyardRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const social = socialRef.current;
-        const lanyard = lanyardRef.current;
-    
-        if (!social || !lanyard) return;
-    
-        const handleScroll = () => {
-            const scrollY = window.scrollY;
-            const clientHeight = document.documentElement.clientHeight;
-    
-            const scrolled = scrollY > clientHeight * 0.3;
-            setIsScrolled(scrolled);
-    
-            const alpha = Math.max(0, clientHeight / 2 - scrollY) / (clientHeight / 2);
-            const scrollBottom = document.getElementById('scroll_bottom');
-            if (scrollBottom) {
-                scrollBottom.style.opacity = alpha.toString();
-            }
-    
-            if (scrolled) {
-                const lanyardRect = lanyard.getBoundingClientRect();
-                const socialRect = social.getBoundingClientRect();
-    
-                const offset = lanyardRect.bottom - socialRect.top + 8;
-                social.style.transform = `translateY(${offset}px)`;
-            } else {
-                social.style.transform = 'translateY(0)';
-            }
+        const onScroll = () => {
+            const h = document.documentElement.clientHeight;
+            setIsScrolled(window.scrollY > h * 0.3);
         };
     
-        handleScroll();
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleScroll);
+        window.addEventListener('scroll', onScroll);
+        onScroll();
     
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('resize', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
     const projects_el = projects.map(project => ( <Card key={project.id} project={project} /> ));
