@@ -224,70 +224,83 @@ export default function Home(props: {
             </header>
             <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
                 <div className={styles.social}>
-                    <a>
+                    <a
                         href="https://github.com/jealleal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandGithub />
                             <span><b>GitHub</b></span>
                         </div>
                     </a>
-                    <a>
+                    
+                    <a
                         href="https://steamcommunity.com/id/JealLeal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandSteam />
                             <span><b>Steam</b></span>
                         </div>
                     </a>
-                    <a>
+                    
+                    <a
                         href="https://roblox.com/users/189788555/profile"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandRoblox />
                             <span><b>Roblox</b></span>
                         </div>
                     </a>
-                    <a>
+                    
+                    <a
                         href="https://open.spotify.com/user/31k32p5eh4wyoof6pwdkjoioj4se"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandSpotify />
                             <span><b>Spotify</b></span>
                         </div>
                     </a>
-                    <a>
+                    
+                    <a
                         href="/tg"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTelegram />
                             <span><b>Telegram</b></span>
                         </div>
                     </a>
-                    <a>
+                    
+                    <a
                         href="https://tiktok.com/@jealleal"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTiktok />
                             <span><b>Tiktok</b></span>
                         </div>
                     </a>
-                    <a>
+                    
+                    <a
                         href="/tgc"
                         style={{ color: '#eeeeee', textDecoration: 'none' }}
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         <div className={styles_pr.button} style={{ borderWidth: '2px', justifyContent: 'center' }}>
                             <IconBrandTelegram />
