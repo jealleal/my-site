@@ -297,10 +297,6 @@ export default function Home(props: {
                         <IconBrandHtml5 {...techIconProps} />
                         <span>HTML 5</span>
                     </div>
-                    <div>
-                        <IconBrandCss3 {...techIconProps} />
-                        <span>CSS 3</span>
-                    </div>
                 </div>
                 <h1
                     style={{
@@ -324,10 +320,6 @@ export default function Home(props: {
                     <div>
                         <NestIcon {...techIconProps} />
                         <span>NestJs</span>
-                    </div>
-                    <div>
-                        <ExpressIcon {...techIconProps} />
-                        <span>Express.js</span>
                     </div>
                     <div>
                         <StaticTooltip title="luau в том числе">
@@ -378,10 +370,6 @@ export default function Home(props: {
                     <div>
                         <CsharpIcon {...techIconProps} />
                         <span>C#</span>
-                    </div>
-                    <div>
-                        <JavaIcon {...techIconProps} />
-                        <span>Java</span>
                     </div>
                 </div>
             </div>
