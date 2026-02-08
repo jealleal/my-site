@@ -14,7 +14,7 @@ import JavaIcon from '@/app/static/java.svg';
 import NestIcon from '@/app/static/nest.svg';
 import LuaIcon from '@/app/static/lua.svg';
 import CsharpIcon from '@/app/static/csharp.svg';
-import TiktokIcon from '@/app/static/Tiktok.svg';
+import IconBrandRoblox from '@/app/static/roblox.svg';
 
 
 import {
@@ -27,7 +27,6 @@ import {
     IconBrandJavascript,
     IconBrandSpotify,
     IconBrandNextjs,
-    IconBrandRoblox,
     IconBrandNodejs,
     IconBrandPrisma,
     IconBrandPython,
