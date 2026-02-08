@@ -32,6 +32,7 @@ import {
     IconBrandReact,
     IconBrandRust,
     IconBrandTelegram,
+    IconBrandTiktok,
     IconBrandTypescript,
     IconChevronDown,
     IconCode,
@@ -242,6 +243,18 @@ export default function Home(props: {
                             <IconBrandTelegram />
                             <span>
                                 <b>Telegram</b>
+                            </span>
+                        </div>
+                    </a>
+                    <a
+                        href="https://tiktok.com/@jealleal"
+                        style={{ color: '#eeeeee', textDecoration: 'none' }}
+                        target="_blank"
+                    >
+                        <div className={styles.single}>
+                            <IconBrandTiktok />
+                            <span>
+                                <b>Tiktok</b>
                             </span>
                         </div>
                     </a>
