@@ -222,6 +222,9 @@ export default function Home(props: {
                     Scroll down
                 </span>
             </header>
+            <h1>
+                Социальные <span className={styles.social_txt}>ссылки</span>
+            </h1>
             <div className={`${styles.social_container} ${isScrolled ? styles.social_scrolled : ''}`}>
                 <div className={styles.social}>
                     <a
