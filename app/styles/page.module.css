@@ -17,9 +17,10 @@
 .animated {
     animation: main_anim .8s cubic-bezier(.4, 0, .2, 1);
     max-width: 668px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
 }
 
 .name {
@@ -29,13 +30,15 @@
     font-size: 3rem;
     font-weight: 400;
     z-index: 1;
+    text-align: center;
 }
 
 .name_cont {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 1.5rem;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
 }
 
 .name_cont img {
@@ -64,13 +67,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     box-sizing: border-box;
     flex-wrap: wrap;
 }
 
 .hello {
-    text-align: left;
+    text-align: center;
     margin-top: 0.5rem;
 }
 
@@ -424,6 +427,144 @@
 
 /* ===== МЕДИА-ЗАПРОСЫ (от большего к меньшему) ===== */
 
+/* УЛЬТРА БОЛЬШИЕ ЭКРАНЫ (≥ 1920px) */
+@media (min-width: 1920px) {
+    .header {
+        padding: 3rem;
+    }
+    
+    .animated {
+        max-width: 800px;
+    }
+    
+    .name {
+        font-size: 3.5rem;
+    }
+    
+    .hello p {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+    
+    .card {
+        width: 18rem;
+        height: 18rem;
+    }
+    
+    .party_hat {
+        width: 11rem !important;
+        top: -7.5rem;
+        right: -1rem;
+    }
+    
+    .christmas_hat {
+        width: 11rem !important;
+        top: -6.5rem;
+        right: 9rem;
+        transform: scale(-1.5, 1.5) rotate(4deg);
+    }
+    
+    .lanyardWrapper {
+        max-width: 450px;
+        padding: 1rem;
+    }
+    
+    .social {
+        max-width: 600px;
+        gap: 1.25rem;
+    }
+    
+    .single {
+        padding: 1.2rem 2.5rem;
+        max-width: 600px;
+    }
+    
+    .single span {
+        font-size: 1.2rem;
+    }
+    
+    .single svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    
+    .tech {
+        max-width: 1000px;
+        gap: 2.5rem;
+    }
+    
+    .tech div {
+        width: 6rem;
+    }
+    
+    .tech img {
+        width: 5rem;
+    }
+    
+    .tech span {
+        font-size: 1.1rem;
+    }
+    
+    .stack h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* БОЛЬШИЕ ЭКРАНЫ (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .header {
+        padding: 2.5rem;
+    }
+    
+    .animated {
+        max-width: 750px;
+    }
+    
+    .name {
+        font-size: 3.25rem;
+    }
+    
+    .card {
+        width: 17rem;
+        height: 17rem;
+    }
+    
+    .party_hat {
+        width: 10rem !important;
+        top: -7rem;
+        right: -0.8rem;
+    }
+    
+    .christmas_hat {
+        width: 10rem !important;
+        top: -6rem;
+        right: 8.2rem;
+        transform: scale(-1.45, 1.45) rotate(4deg);
+    }
+    
+    .social {
+        max-width: 550px;
+    }
+    
+    .single {
+        max-width: 550px;
+        padding: 1.1rem 2.25rem;
+    }
+    
+    .tech {
+        max-width: 900px;
+        gap: 2.25rem;
+    }
+    
+    .tech div {
+        width: 5.5rem;
+    }
+    
+    .tech img {
+        width: 4.5rem;
+    }
+}
+
 /* ПЛАНШЕТЫ И НЕБОЛЬШИЕ ЭКРАНЫ (≤ 970px) */
 @media (max-width: 970px) {
     .header {
@@ -441,24 +582,14 @@
     .name {
         font-size: 2.8rem;
         margin-top: 1.2rem;
-        text-align: center;
         line-height: 1.2;
     }
     
-    .name_cont {
-        align-items: center;
-        margin-left: 0;
-        width: 100%;
-    }
-    
     .nicks {
-        flex-direction: column;
         gap: 0.5rem;
-        align-items: center;
     }
     
     .hello {
-        text-align: center;
         margin-top: 1.2rem;
         padding: 0 0.5rem;
     }
