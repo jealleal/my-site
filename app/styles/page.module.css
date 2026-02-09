@@ -168,7 +168,7 @@
     background-color: var(--buttons-color);
     transition: all 0.3s ease;
     gap: 1rem;
-    width: auto; /* изменено с 100% на auto */
+    width: 100%; /* изменено с 100% на auto */
     max-width: 500px;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
