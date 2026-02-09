@@ -149,7 +149,7 @@
     gap: 1rem;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center; /* изменено с stretch на center */
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -168,7 +168,7 @@
     background-color: var(--buttons-color);
     transition: all 0.3s ease;
     gap: 1rem;
-    width: 100%;
+    width: auto; /* изменено с 100% на auto */
     max-width: 500px;
     justify-content: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
